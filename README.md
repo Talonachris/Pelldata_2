@@ -16,13 +16,13 @@
 - **Fully stylised messages** – Colored and formatted output for all commands.
 - **Dynamic placeholders** – Uniform use of `{prefix}`, `{rank}`, `{value}`, `{name}`, etc.
 - **Block statistics** – placed & broken blocks with global top lists.
-- **Mob & PvP kills** – separate counters with top mob types.
+- **Mob & PvP kills** – separate counters.
 - **Deaths** – tracks player deaths.
 - **Playtime (AFK filter)** – adds 5 s every 5 s while player is active (≤ 10 min idle).
 - **Chat messages** – counts chat lines written.
 - **Global stats** – `/pelldata globalstats` shows server-wide stats.
 - **Rankings** – `/pelldata ranking` opens interactive GUI.
-- **Visual GUI Menu** – Fully translated inventory interface `/pelldata stats` with clickable categories and back buttons.
+- **Visual GUI Menu** – Fully translated inventory interface `/pelldata stats`.
 - **PlaceholderAPI** – personal, global & per‑player placeholders.
 - **Localisation** – via `locales/en_us.yml`, `de_de.yml`, ...
 
@@ -105,13 +105,13 @@ To translate PellData, copy the file as `de_de.yml` or `custom.yml` and modify t
 - **Vollständig formatierte Ausgaben** – Farbige & strukturierte Texte für alle Befehle.
 - **Dynamische Platzhalter** – Einheitlich wie `{prefix}`, `{value}`, `{name}` etc.
 - **Blockstatistiken** – gesetzte & abgebaute Blöcke mit globalen Toplisten.
-- **Mob- & PvP-Kills** – mit getrennten Zählern & Top-Mob-Typen.
+- **Mob- & PvP-Kills** – mit getrennten Zählern.
 - **Tode** – erfasst Spielertode.
 - **Spielzeit (AFK-Filter)** – zählt nur, wenn Spieler ≤ 10 Min. aktiv ist.
 - **Chatnachrichten** – zählt geschriebene Zeilen.
 - **Globale Statistiken** – `/pelldata globalstats` zeigt die Gesamtdaten.
 - **Ranglisten-Menü** – `/pelldata ranking` öffnet interaktive GUI.
-- **Visuelles Menü** – `/pelldata stats` zeigt alle Kategorien & Rankings per Klick – mit Zurück-Button.
+- **Visuelles Menü** – `/pelldata stats`.
 - **PlaceholderAPI** – Platzhalter für persönliche, globale & Spielerwerte.
 - **Lokalisierung** – über `locales/en_us.yml`, `de_de.yml`, …
 
