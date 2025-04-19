@@ -1,0 +1,9 @@
+# PellData Konfiguration
+
+# Sprache des Plugins: z.B. en_us, de_de, custom
+language: en_us
+
+# Backup-Intervall in Minuten (z.B. 5 = alle 5 Minuten)
+# 0 = Backup deaktiviert
+backup:
+  interval_minutes: 5

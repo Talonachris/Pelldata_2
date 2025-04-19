@@ -1,0 +1,14 @@
+name: PellData
+version: 2.0b2
+main: com.talona.pellData.PellData
+api-version: 1.20
+author: Talona
+description: Statistik-Plugin für Minecraft
+softdepend: [PlaceholderAPI]
+
+commands:
+  pelldata:
+    description: Zeigt Statistiken an
+    usage: /pelldata <stats|globalstats|ranking>
+    permission: pelldata.use
+    tab-completer: com.talona.pellData.CommandCompleter

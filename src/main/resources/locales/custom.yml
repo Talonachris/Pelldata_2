@@ -1,0 +1,71 @@
+# ==================================================
+#               PellData - custom.yml
+#    Localization template file (English, editable)
+# ==================================================
+
+# -------------------------------------------
+# COMMAND MESSAGES
+# -------------------------------------------
+command:
+  no_player: "§cOnly players can use this command."
+  help:
+    header: "§e[PellData] §7Available commands:"
+    stats: "§e/pelldata stats §7– Show your personal statistics"
+    global: "§e/pelldata globalstats §7– Show global statistics"
+    ranking: "§e/pelldata ranking §7– Open the ranking menu"
+
+# -------------------------------------------
+# GUI: GENERAL
+# -------------------------------------------
+gui:
+  back: "§cBack"
+
+  # -------------------------------------------
+  # GUI: PERSONAL STATS MENU
+  # -------------------------------------------
+  stats:
+    title: "§6§lYour Statistics"
+    blocks:
+      title: "Blocks"
+      placed: "§7Placed: §a{value}"
+      broken: "§7Broken: §a{value}"
+    killed:
+      title: "Mobs"
+      value: "§7Mobs killed: §a{value}"
+    pvp:
+      title: "PvP"
+      value: "§7PvP kills: §a{value}"
+    deaths:
+      title: "Deaths"
+      value: "§7Deaths: §a{value}"
+    playtime:
+      title: "Playtime"
+      value: "§7Playtime: §a{value}"
+    chat:
+      title: "Chat"
+      value: "§7Messages: §a{value}"
+
+  # -------------------------------------------
+  # GUI: GLOBAL STATS MENU
+  # -------------------------------------------
+  global:
+    title: "§6§lGlobal Statistics"
+
+  # -------------------------------------------
+  # GUI: RANKINGS
+  # -------------------------------------------
+  ranking:
+    title: "§6§lTop Rankings"
+    title_placed: "§6§lTop Blocks"
+    title_pvp: "§6§lTop PvP"
+    title_mobs: "§6§lTop Mobs"
+    title_deaths: "§6§lTop Deaths"
+    title_playtime: "§6§lTop Playtime"
+    title_chat: "§6§lTop Chat"
+    placed: "Blocks"
+    pvp: "PvP"
+    mobs: "Mobs"
+    deaths: "Deaths"
+    playtime: "Playtime"
+    chat: "Chat"
+    value_only: "§7{stat}: §a{value}"
