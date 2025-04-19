@@ -107,6 +107,14 @@ To translate PellData, copy the file as `de_de.yml` or `custom.yml` and modify t
 
 ---
 
+### Why is it called PellData?
+
+The name *PellData* is a combination of two words: **Pelle** and **Data**.  
+**Pelle** is the name of my dog 🐶 – and since this plugin is all about player statistics and tracking data, the second part **Data** just made perfect sense.  
+So yes, my dog is technically helping you count blocks. You're welcome.
+
+---
+
 ## 🇩🇪 Deutsch
 
 ---
@@ -204,4 +212,14 @@ Du kannst sie kopieren (z. B. als `de_de.yml` oder `custom.yml`) und übersetz
 - Backups werden automatisch alle X Minuten erstellt.
 - Die Backup-Datei heißt `data_backup.db` und liegt im Plugin-Ordner.
 - Das Intervall kann in der `config.yml` über `backup.interval_minutes` eingestellt werden.
+
+---
+
+### Warum heißt das Plugin PellData?
+
+Der Name *PellData* setzt sich aus zwei Wörtern zusammen: **Pelle** und **Data**.  
+**Pelle** ist der Name meines Hundes 🐶 – und da es in diesem Plugin um Spielerstatistiken und Datenauswertung geht, passt **Data** einfach perfekt dazu.  
+Mit anderen Worten: Mein Hund hilft dir dabei, deine Blöcke zu zählen. Gern geschehen.
+
+
 
