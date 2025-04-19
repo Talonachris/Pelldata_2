@@ -80,6 +80,17 @@ backup:
 %pelldata_global_pvp%
 ```
 
+**Per Player**
+```
+%pelldata_blocks_placed_<Name>%
+%pelldata_blocks_broken_<Name>%
+%pelldata_killed_mobs_<Name>%
+%pelldata_deaths_<Name>%
+%pelldata_playtime_<Name>%
+%pelldata_chat_<Name>%
+%pelldata_pvp_<Name>%
+```
+
 ---
 
 ### 🌐 Localisation
@@ -145,7 +156,7 @@ backup:
 
 ---
 
-### 📚 PlaceholderAPI‑Variablen
+### 📚 PlaceholderAPI-Variablen
 
 **Eigene Werte**
 ```
@@ -169,6 +180,17 @@ backup:
 %pelldata_global_pvp%
 ```
 
+**Spielerbezogen**
+```
+%pelldata_blocks_placed_<Name>%
+%pelldata_blocks_broken_<Name>%
+%pelldata_killed_mobs_<Name>%
+%pelldata_deaths_<Name>%
+%pelldata_playtime_<Name>%
+%pelldata_chat_<Name>%
+%pelldata_pvp_<Name>%
+```
+
 ---
 
 ### 🌐 Lokalisierung
@@ -182,3 +204,4 @@ Du kannst sie kopieren (z. B. als `de_de.yml` oder `custom.yml`) und übersetz
 - Backups werden automatisch alle X Minuten erstellt.
 - Die Backup-Datei heißt `data_backup.db` und liegt im Plugin-Ordner.
 - Das Intervall kann in der `config.yml` über `backup.interval_minutes` eingestellt werden.
+
