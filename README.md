@@ -15,16 +15,16 @@
 - **Custom localisation (`custom.yml`)** – Use `language: custom` in `config.yml` for your own translation.
 - **Fully stylised messages** – Colored and formatted output for all commands.
 - **Dynamic placeholders** – Uniform use of `{prefix}`, `{rank}`, `{value}`, `{name}`, etc.
-- **Block statistics** – placed & broken blocks (overall & per‑type) with *top* lists and rankings.
-- **Mob & PvP kills** – separate counters incl. *top* killed mob types.
+- **Block statistics** – placed & broken blocks with global top lists.
+- **Mob & PvP kills** – separate counters with top mob types.
 - **Deaths** – tracks player deaths.
 - **Playtime (AFK filter)** – adds 5 s every 5 s while player is active (≤ 10 min idle).
 - **Chat messages** – counts chat lines written.
-- **Global stats** – `/pelldata globalstats` summarises everyone.
-- **Rankings** – `/pelldata ranking <type>` shows global Top 10.
-- **Visual GUI Menu** – Access your stats and rankings through a fully interactive inventory menu using `/pelldata menu`. All texts are translatable, and items are beautifully styled and non-movable.  
+- **Global stats** – `/pelldata globalstats` shows server-wide stats.
+- **Rankings** – `/pelldata ranking` opens interactive GUI.
+- **Visual GUI Menu** – Fully translated inventory interface `/pelldata stats` with clickable categories and back buttons.
 - **PlaceholderAPI** – personal, global & per‑player placeholders.
-- **Localisation** – translatable via `locales/en_us.yml`, `locales/de_de.yml`, …
+- **Localisation** – via `locales/en_us.yml`, `de_de.yml`, ...
 
 ---
 
@@ -39,27 +39,24 @@
 ### ⚙️ Configuration
 ```yml
 # plugins/PellData/config.yml
-language: en_us   # en_us | de_de | custom ...
+# Set your language and backup settings
+language: en_us   # en_us | de_de | custom
+backup:
+  interval_minutes: 5   # Backup every X minutes
 ```
 
 ---
 
-### 🔹 Commands & Permissions
-| Command | Permission | Description |
-|---------|------------|-------------|
-| `/pelldata stats <sub>` | – | Your stats (`blocks`, `killed`, `pvp`, `deaths`, `playtime`, `chat`, `all`, `topplaced`, `topbroken`, `topmobs`) |
-| `/pelldata ranking <type>` | – | Top‐10 list (`placed`, `broken`, `killed`, `deaths`, `playtime`, `chat`, `pvp`) |
-| `/pelldata player <name>` | – | Another player’s stats |
-| `/pelldata reset <name>` | `pelldata.reset` | Reset a player’s stats |
-| `/pelldata globalstats` | – | Combined server statistics |
-| `/pelldata menu` | – | Opens the graphical statistics menu |
+### 🔹 Commands
+| Command | Description |
+|---------|-------------|
+| `/pelldata stats` | Open your personal statistics GUI |
+| `/pelldata globalstats` | View combined global statistics |
+| `/pelldata ranking` | Opens the global Top-10 ranking menu |
 
-  
 ---
 
 ### 📚 PlaceholderAPI Variables
-
----
 
 **Personal**
 ```
@@ -71,8 +68,6 @@ language: en_us   # en_us | de_de | custom ...
 %pelldata_chat%
 %pelldata_pvp%
 ```
-
----
 
 **Global**
 ```
@@ -87,33 +82,17 @@ language: en_us   # en_us | de_de | custom ...
 
 ---
 
-**For a specific player**
-```
-%pelldata_blocks_placed_<Name>%
-%pelldata_blocks_broken_<Name>%
-%pelldata_killed_mobs_<Name>%
-%pelldata_deaths_<Name>%
-%pelldata_playtime_<Name>%
-%pelldata_chat_<Name>%
-%pelldata_pvp_<Name>%
-```
-
----
-
 ### 🌐 Localisation
-English file **`en_us.yml`** is loaded by default. Copy it (e.g. as `de_de.yml`) and translate – keep colour codes & placeholders **as is**.
+English (`en_us.yml`) is loaded by default.  
+To translate PellData, copy the file as `de_de.yml` or `custom.yml` and modify texts – keep color codes and placeholders.
 
 ---
 
-### 🧠 Made with AI, love & plenty of time by **Talonachris**
-The **entire** plugin was built fully with the help of AI – from the very first line of code – and then polished with lots of love and time by **Talonachris**.
+### 💾 Backup Feature
 
----
-
-### 🚣️ Coming Features
-- Database backup function  
-- Seamless DB upgrade between plugin versions  
-- MySQL support
+- Backups are automatically created every X minutes.
+- The backup file is named `data_backup.db` and stored in the plugin folder.
+- You can configure the interval in `config.yml` with `backup.interval_minutes`.
 
 ---
 
@@ -122,54 +101,51 @@ The **entire** plugin was built fully with the help of AI – from the very firs
 ---
 
 ### ✨ Funktionen
-- **Eigene Lokalisierung (`custom.yml`)** – Verwende `language: custom` in der `config.yml` für deine eigene Übersetzung.
-- **Vollständig formatierte Ausgaben** – Farbige & schön strukturierte Nachrichten in allen Befehlen.
-- **Dynamische Platzhalter** – Einheitliche Verwendung von `{prefix}`, `{rank}`, `{value}`, `{name}` usw.
-- **Block‑Statistiken** – gesetzte & abgebaute Blöcke (gesamt & pro Typ) mit *Top*‑Listen und Ranglisten.
-- **Mob‑ & PvP‑Kills** – getrennte Zähler inkl. *Top* getötete Mob‑Typen.
-- **Tode** – Spielertode.
-- **Spielzeit (AFK‑Filter)** – alle 5 s, solange der Spieler ≤ 10 Min. aktiv ist.
-- **Chatnachrichten** – Anzahl gesendeter Nachrichten.
-- **Globale Statistiken** – `/pelldata globalstats` fasst alle Spieler zusammen.
-- **Ranglisten** – `/pelldata ranking <typ>` zeigt globale Top 10.
-- **Visuelles GUI-Menü** – Zeigt alle Statistiken direkt im Inventar per `/pelldata menu`. Farben, Texte und Navigation sind vollständig übersetzbar – mit Rankings, Zurück-Button und fixierten Items.
-- **PlaceholderAPI** – persönliche, globale & spielerbezogene Platzhalter.
-- **Lokalisierung** – Übersetzbar via `locales/en_us.yml`, `locales/de_de.yml` …
+- **Eigene Lokalisierung (`custom.yml`)** – Verwende `language: custom` in der `config.yml`.
+- **Vollständig formatierte Ausgaben** – Farbige & strukturierte Texte für alle Befehle.
+- **Dynamische Platzhalter** – Einheitlich wie `{prefix}`, `{value}`, `{name}` etc.
+- **Blockstatistiken** – gesetzte & abgebaute Blöcke mit globalen Toplisten.
+- **Mob- & PvP-Kills** – mit getrennten Zählern & Top-Mob-Typen.
+- **Tode** – erfasst Spielertode.
+- **Spielzeit (AFK-Filter)** – zählt nur, wenn Spieler ≤ 10 Min. aktiv ist.
+- **Chatnachrichten** – zählt geschriebene Zeilen.
+- **Globale Statistiken** – `/pelldata globalstats` zeigt die Gesamtdaten.
+- **Ranglisten-Menü** – `/pelldata ranking` öffnet interaktive GUI.
+- **Visuelles Menü** – `/pelldata stats` zeigt alle Kategorien & Rankings per Klick – mit Zurück-Button.
+- **PlaceholderAPI** – Platzhalter für persönliche, globale & Spielerwerte.
+- **Lokalisierung** – über `locales/en_us.yml`, `de_de.yml`, …
 
 ---
 
 ### 🚀 Installation
-1. JAR von den **Releases** herunterladen.  
-2. In den **`/plugins`**‑Ordner legen.  
-3. *(Wichtig!)* [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) installieren.  
-4. Server starten – PellData erstellt seine Dateien.
+1. JAR aus den **Releases** herunterladen  
+2. In **`/plugins`** einfügen  
+3. *(Wichtig!)* [PlaceholderAPI](https://www.spigotmc.org/resources/placeholderapi.6245/) installieren  
+4. Server starten – PellData erzeugt die Dateien
 
 ---
 
 ### ⚙️ Konfiguration
 ```yml
 # plugins/PellData/config.yml
-language: de_de   # de_de | en_us | custom ...
+# Set your language and backup settings
+language: de_de   # de_de | en_us | custom
+backup:
+  interval_minutes: 5   # Backup alle X Minuten
 ```
 
 ---
 
-### 🔹 Befehle & Berechtigungen
-| Befehl | Permission | Beschreibung |
-|--------|------------|--------------|
-| `/pelldata stats <sub>` | – | Eigene Stats (`blocks`, `killed`, `pvp`, `deaths`, `playtime`, `chat`, `all`, `topplaced`, `topbroken`, `topmobs`) |
-| `/pelldata ranking <typ>` | – | Top‐10‑Liste (`placed`, `broken`, `killed`, `deaths`, `playtime`, `chat`, `pvp`) |
-| `/pelldata player <name>` | – | Stats eines anderen Spielers |
-| `/pelldata reset <name>` | `pelldata.reset` | Stats eines Spielers zurücksetzen |
-| `/pelldata globalstats` | – | Gesamte Server‑Statistiken |
-| `/pelldata menu` | – | Öffnet das grafische Statistik-Menü |
+### 🔹 Befehle
+| Befehl | Beschreibung |
+|--------|--------------|
+| `/pelldata stats` | Öffnet deine Statistik-GUI |
+| `/pelldata globalstats` | Zeigt globale Gesamtstatistiken |
+| `/pelldata ranking` | Öffnet das globale Top-Ranking-Menü |
 
-  
 ---
 
 ### 📚 PlaceholderAPI‑Variablen
-
----
 
 **Eigene Werte**
 ```
@@ -181,8 +157,6 @@ language: de_de   # de_de | en_us | custom ...
 %pelldata_chat%
 %pelldata_pvp%
 ```
-
----
 
 **Globale Werte**
 ```
@@ -197,32 +171,14 @@ language: de_de   # de_de | en_us | custom ...
 
 ---
 
-**Spielerbezogen**
-```
-%pelldata_blocks_placed_<Name>%
-%pelldata_blocks_broken_<Name>%
-%pelldata_killed_mobs_<Name>%
-%pelldata_deaths_<Name>%
-%pelldata_playtime_<Name>%
-%pelldata_chat_<Name>%
-%pelldata_pvp_<Name>%
-```
-
----
-
 ### 🌐 Lokalisierung
-Die englische Datei **`en_us.yml`** wird standardmäßig geladen. Kopiere sie z. B. als `de_de.yml`, übersetze die Texte – Farbcodes & Platzhalter **unverändert** lassen.
+Die englische Datei (`en_us.yml`) wird standardmäßig geladen.  
+Du kannst sie kopieren (z. B. als `de_de.yml` oder `custom.yml`) und übersetzen – Farbcodes und Platzhalter **nicht verändern**.
 
 ---
 
-### 🧠 Gemacht mit KI, Liebe & viel Zeit von **Talonachris**
-Das **gesamte** Plugin wurde vollständig mithilfe von KI (künstlicher Intelligenz) entwickelt – von der ersten Codezeile – und anschließend mit viel Liebe und Zeit von **Talonachris** verfeinert.
+### 💾 Backup-Funktion
 
----
-
-### 🚣️ Kommende Features
-- Backup‑Funktion für die Datenbank  
-- Datenbank‑Migration zwischen Plugin‑Versionen  
-- MySQL‑Support
-
----
+- Backups werden automatisch alle X Minuten erstellt.
+- Die Backup-Datei heißt `data_backup.db` und liegt im Plugin-Ordner.
+- Das Intervall kann in der `config.yml` über `backup.interval_minutes` eingestellt werden.
